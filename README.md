@@ -3,9 +3,8 @@ Elmculator
 
 A simple calculator project that serves as a learning-by-doing exercise in Elm.
 
-**How to start**
+**How to build**
 
-Just go to the root of project and run `elm package install`. Then kick off the
-[Elm Reactor](https://github.com/elm-lang/elm-reactor) by running `elm reactor`.
-Then point your browser to [localhost:8000](http://localhost:8000) and navigate
-to `Main.elm` and presto!
+Just go to the root of project and run `elm package install`. Then build the
+project by running `elm make src/Main.elm --output elm.js`. Finally, open
+`index.html` in your browser. Enjoy!
