@@ -3,34 +3,17 @@ import Html.Events exposing (onClick)
 import StartApp.Simple as StartApp
 import String exposing (toFloat)
 
+import Operators exposing (..)
+
 main =
   StartApp.start { model = model, view = view, update = update }
-
-type alias Operator = Float -> Float -> Float
-plus : Operator
-plus a b =
-  a + b
-
-minus : Operator
-minus a b =
-  a - b
-
-multiply : Operator
-multiply a b =
-  a * b
-
-divide : Operator
-divide a b =
-  a / b
-
-equals : Operator
-equals a b = a
 
 
 type alias Model = { result: Float, text: String, operator: Operator, clearBuffer: Bool }
 emptyModel = { result = 0, text = "", operator = plus, clearBuffer = False }
 model : Model
 model = emptyModel
+
 
 view address model =
   div []
@@ -70,6 +53,7 @@ numberButton address number =
   button [ onClick address (TypeNumber (toString number)) ] [ text (toString number) ]
 
 type ButtonPress = TypeNumber String | SelectOperator Operator | Clear
+
 
 update: ButtonPress -> Model -> Model
 update action model =
