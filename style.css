@@ -1,0 +1,71 @@
+html {
+  background-image: url('static/geometry2.png');
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: Montserrat, sans-serif;
+  box-shadow: inset 0 0 20em #AAA;
+}
+
+.calculator {
+  background-color: #B9DDF6;
+  border-radius: 20px;
+  padding: 1em;
+  box-shadow: 0px 10px 10px #62A0CC;
+  background: linear-gradient(to bottom, #b9ddf6 0%,#8cc1e6 100%);
+}
+
+.calculator__resultsarea {
+  background-color: #FFEEBC;
+  height: 3em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 2px #FFDB72;
+  border: 2px solid #FFDB72;
+  text-align: right;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.calculator__title {
+  font-size: 3em;
+  text-align: center;
+  color: #FEFEFE;
+  text-shadow: 0px 1px 10px #8CC1E6;
+  text-transform: uppercase;
+}
+
+.calculator__button, .calculator__button__operator, .calculator__button__action {
+  border: 0px solid;
+  width: 3em;
+  height: 3em;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  box-shadow: 0 0 6px #8CC1E6;
+}
+
+.calculator__button {
+  background-color: #E8F5FE;
+  color: #62A0CC;
+}
+
+.calculator__button__operator {
+  background-color: #FF9872;
+}
+
+.calculator__button__action {
+  background-color: #FFDB72;
+  color: #CF8B22;
+}
