@@ -18,4 +18,4 @@ divide a b =
   a / b
 
 equals : Operator
-equals a b = a
+equals a b = b
