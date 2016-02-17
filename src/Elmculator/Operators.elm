@@ -1,4 +1,4 @@
-module Operators where
+module Elmculator.Operators where
 
 type alias Operator = Float -> Float -> Float
 plus : Operator
