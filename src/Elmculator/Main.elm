@@ -11,15 +11,14 @@ import Elmculator.Actions exposing (Action)
 import Elmculator.Operators exposing (..)
 
 app =
-  StartApp.start { init = (emptyModel, Effects.none), view = view, update = update, inputs = [ Elmculator.Keyboard.input ] }
+  StartApp.start { init = (initialModel, Effects.none), view = view, update = update, inputs = [ Elmculator.Keyboard.input ] }
 
 main =
   app.html
 
 type alias Model = { result: Float, text: String, operator: Operator, clearBuffer: Bool }
-emptyModel = { result = 0, text = "", operator = plus, clearBuffer = False }
-model : Model
-model = emptyModel
+initialModel : Model
+initialModel = { result = 0, text = "", operator = plus, clearBuffer = False }
 
 view address model =
   div [ class "calculator" ] [
@@ -77,7 +76,7 @@ update action model =
           result = applyOperator model.operator model
         in
           { model | result = result, text = toString result, clearBuffer = True, operator = operator }
-      Elmculator.Actions.Clear -> emptyModel
+      Elmculator.Actions.Clear -> initialModel
     in
       (result, Effects.none)
 
